@@ -3,6 +3,7 @@
 namespace Elphtly\KahlanBundle\Command;
 
 use Buzz\Browser;
+use Kahlan\Filter\Filter;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -23,6 +24,7 @@ class KahlanCommand extends ContainerAwareCommand
             ->setName('kahlan:run')
             ->setDescription('Launch Kahlan specs suite')
             ->addOption('reporter', null, InputOption::VALUE_OPTIONAL, 'Defines the reporting style')
+            ->addOption('config', null, InputOption::VALUE_OPTIONAL, 'Defines the custom config file')
         ;
     }
 
@@ -68,13 +70,6 @@ class KahlanCommand extends ContainerAwareCommand
             return new Suite();
         });
 
-        $box->service('suite.container', function() use ($container) {
-            return $container;
-        });
-
-        $box->service('suite.client', function() use ($client) {
-            return $client;
-        });
 
         $specs = new Kahlan([
             'autoloader' => reset($autoloaders),
@@ -83,6 +78,21 @@ class KahlanCommand extends ContainerAwareCommand
             'client'     => $box->get('suite.client')
         ]);
         $specs->loadConfig($_SERVER['argv']);
+
+        Filter::register('registering.container', function($chain) use ($specs, $container) {
+            $root = $specs->suite();
+            $root->container = $container;
+            return $chain->next();
+        });
+        Filter::apply($this, 'run', 'registering.container');
+
+        Filter::register('registering.client', function($chain) use ($specs, $client) {
+            $root = $specs->suite();
+            $root->container = $client;
+            return $chain->next();
+        });
+        Filter::apply($this, 'run', 'registering.client');
+
         $specs->run();
         exit($specs->status());
     }
