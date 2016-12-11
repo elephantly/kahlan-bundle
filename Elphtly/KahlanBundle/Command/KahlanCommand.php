@@ -73,9 +73,7 @@ class KahlanCommand extends ContainerAwareCommand
 
         $specs = new Kahlan([
             'autoloader' => reset($autoloaders),
-            'suite'      => $box->get('suite.global'),
-            'container'  => $box->get('suite.container'),
-            'client'     => $box->get('suite.client')
+            'suite'      => $box->get('suite.global')
         ]);
         $specs->loadConfig($_SERVER['argv']);
 
@@ -84,14 +82,14 @@ class KahlanCommand extends ContainerAwareCommand
             $root->container = $container;
             return $chain->next();
         });
-        Filter::apply($this, 'run', 'registering.container');
+        Filter::apply($specs, 'run', 'registering.container');
 
         Filter::register('registering.client', function($chain) use ($specs, $client) {
             $root = $specs->suite();
             $root->container = $client;
             return $chain->next();
         });
-        Filter::apply($this, 'run', 'registering.client');
+        Filter::apply($specs, 'run', 'registering.client');
 
         $specs->run();
         exit($specs->status());
