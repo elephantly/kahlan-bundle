@@ -86,7 +86,7 @@ class KahlanCommand extends ContainerAwareCommand
 
         Filter::register('registering.client', function($chain) use ($specs, $client) {
             $root = $specs->suite();
-            $root->container = $client;
+            $root->client = $client;
             return $chain->next();
         });
         Filter::apply($specs, 'run', 'registering.client');
