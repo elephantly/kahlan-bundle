@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Elephantly\\KahlanBundle": "Elephantly/"
+            "Elephantly\\KahlanBundle": "Elephantly/KahlanBundle"
         }
     }
 }
