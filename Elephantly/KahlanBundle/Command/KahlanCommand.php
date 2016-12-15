@@ -1,6 +1,6 @@
 <?php
 
-namespace Elphtly\KahlanBundle\Command;
+namespace Elephantly\KahlanBundle\Command;
 
 use Buzz\Browser;
 use Kahlan\Filter\Filter;

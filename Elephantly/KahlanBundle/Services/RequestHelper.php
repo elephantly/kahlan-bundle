@@ -6,7 +6,7 @@
  * Time: 10:34
  */
 
-namespace Elphtly\KahlanBundle\Services;
+namespace Elephantly\KahlanBundle\Services;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Router;

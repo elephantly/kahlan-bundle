@@ -1,6 +1,6 @@
 <?php
 
-namespace Elphtly\KahlanBundle;
+namespace Elephantly\KahlanBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

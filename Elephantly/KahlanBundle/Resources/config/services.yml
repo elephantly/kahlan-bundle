@@ -1,7 +1,7 @@
 services:
 #    kahlan.example:
-#        class: Elphtly\KahlanBundle\Example
+#        class: Elephantly\KahlanBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
     kahlan.request_helper:
-        class: Elphtly\KahlanBundle\Services\RequestHelper
+        class: Elephantly\KahlanBundle\Services\RequestHelper
         arguments: [ '@router' ]
