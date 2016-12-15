@@ -23,9 +23,40 @@ class KahlanCommand extends ContainerAwareCommand
     {
         $this
             ->setName('kahlan:run')
-            ->setDescription('Launch Kahlan specs suite')
-            ->addOption('reporter', null, InputOption::VALUE_OPTIONAL)
-            ->addOption('config', null, InputOption::VALUE_OPTIONAL)
+            ->setDescription('Kahlan specs suite')
+            ->addOption('config', null, InputOption::VALUE_REQUIRED, 'The PHP configuration file to use (default: \'kahlan-config.php\').')
+            ->addOption('src', null, InputOption::VALUE_REQUIRED, 'Paths of source directories (default: [\'src\']).')
+            ->addOption('spec', null, InputOption::VALUE_REQUIRED, 'Paths of specification directories (default: [\'spec\']).')
+            ->addOption('pattern', null, InputOption::VALUE_REQUIRED, 'A shell wildcard pattern (default: \'*Spec.php\').
+            ')
+            ->addOption('reporter', 'r', InputOption::VALUE_REQUIRED, 'The name of the text reporter to use, the built-in text reporters
+                                            are \'dot\', \'bar\', \'json\', \'tap\' & \'verbose\' (default: \'dot\').
+                                            You can optionally redirect the reporter output to a file by using the
+                                            colon syntax (multiple --reporter options are also supported).
+            ')
+            ->addOption('coverage', 'c', InputOption::VALUE_REQUIRED, 'Generate code coverage report. The value specify the level of
+                                            detail for the code coverage report (0-4). If a namespace, class, or
+                                            method definition is provided, it will generate a detailed code
+                                            coverage of this specific scope (default `\'\'`).')
+            ->addOption('clover', null, InputOption::VALUE_REQUIRED, 'Export code coverage report into a Clover XML format.')
+            ->addOption('istanbul', null, InputOption::VALUE_REQUIRED, 'Export code coverage report into an istanbul compatible JSON format.')
+            ->addOption('lcov', null, InputOption::VALUE_REQUIRED, 'Export code coverage report into a lcov compatible text format.
+            ')
+            ->addOption('ff', null, InputOption::VALUE_REQUIRED, 'Fast fail option. `0` mean unlimited (default: `0`).')
+            ->addOption('no-colors', null, InputOption::VALUE_REQUIRED, 'To turn off colors. (default: `false`).')
+            ->addOption('no-header', null, InputOption::VALUE_REQUIRED, 'To turn off header. (default: `false`).')
+            ->addOption('include', null, InputOption::VALUE_REQUIRED, 'Paths to include for patching. (default: `[\'*\']`).')
+            ->addOption('exclude', null, InputOption::VALUE_REQUIRED, 'Paths to exclude from patching. (default: `[]`).')
+            ->addOption('persistent', null, InputOption::VALUE_REQUIRED, 'Cache patched files (default: `true`).')
+            ->addOption('cache-clear', 'cc', InputOption::VALUE_REQUIRED, 'Cache patched files (default: `true`).
+            ')
+            ->addOption('autoclear', null, InputOption::VALUE_REQUIRED, 'Classes to autoclear after each spec (default: [
+                                          `\'Kahlan\Plugin\Monkey\'`,
+                                          `\'Kahlan\Plugin\Call\'`,
+                                          `\'Kahlan\Plugin\Stub\'`,
+                                          `\'Kahlan\Plugin\Quit\'`
+                                      ])
+            ')
         ;
     }
 
