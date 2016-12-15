@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "kriswallsmith/buzz":"dev-master",
+        "kriswallsmith/buzz":"^0.15",
         "kahlan/kahlan": "~3.0"
     },
     "autoload": {
