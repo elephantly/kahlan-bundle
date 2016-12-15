@@ -1,7 +1,7 @@
 # kahlan-bundle
 A ToolBox to use kahlan with symfony easily.
 
-### Configuration :
+## Configuration :
 Simply register the bundle in Symfony's kernel like any other bundle:
 ```php
 // app/AppKernel.php
@@ -18,10 +18,10 @@ Simply register the bundle in Symfony's kernel like any other bundle:
     }
 ```
 
-### Usage :
+## Usage :
 Check [Kahlan's documentation](https://kahlan.github.io/docs/) for basic usage and principles.
 
-#### Added features :
+### Added features :
 **Service Container :**
 Symfony's service container is available in every spec file with `$this->container`.
 
