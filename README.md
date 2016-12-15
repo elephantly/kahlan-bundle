@@ -7,12 +7,11 @@ Simply register the bundle in Symfony's kernel like any other bundle:
 // app/AppKernel.php
     public function registerBundles()
     {
-        [...]
-
-        if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
+        $bundles = array(
             [...]
-            $bundles[] = new Elphantly\KahlanBundle\KahlanBundle();
-        }
+            new Elephantly\KahlanBundle\KahlanBundle(),
+        );
+        [...]
 
         return $bundles;
     }
