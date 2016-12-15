@@ -14,7 +14,7 @@
         "kahlan/kahlan": "~3.0"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Elephantly\\": ""
         }
     }
