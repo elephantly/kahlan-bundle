@@ -1,0 +1,21 @@
+{
+    "name": "elephantly/kahlan-bundle",
+    "description": "Symfony bundle for Kahlan Test Framework integration",
+    "keywords": ["Symfony", "Testing", "Unit Test", "Behavior-Driven Development", "TDD", "BDD", "Monkey Patching", "Stub", "Mock"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tiriel"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "kriswallsmith/buzz":"dev-master",
+        "kahlan/kahlan": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elephantly\\": "./"
+        }
+    }
+}
