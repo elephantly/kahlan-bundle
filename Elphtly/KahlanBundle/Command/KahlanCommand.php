@@ -3,6 +3,8 @@
 namespace Elphtly\KahlanBundle\Command;
 
 use Buzz\Browser;
+use Kahlan\Filter\Filter;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -22,7 +24,8 @@ class KahlanCommand extends ContainerAwareCommand
         $this
             ->setName('kahlan:run')
             ->setDescription('Launch Kahlan specs suite')
-            ->addOption('reporter', null, InputOption::VALUE_OPTIONAL, 'Defines the reporting style')
+            ->addOption('reporter', null, InputOption::VALUE_OPTIONAL)
+            ->addOption('config', null, InputOption::VALUE_OPTIONAL)
         ;
     }
 
@@ -32,7 +35,25 @@ class KahlanCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $container   = $this->getContainer();
-        $client      = new Browser();
+
+        $autoloaders = $this->registerAutoloaders($container);
+
+        $specs = $this->createSpecs($autoloaders);
+
+        $specs->loadConfig($_SERVER['argv']);
+
+        $this->registerAdditionnalShortcuts($specs, $container);
+
+        $specs->run();
+        exit($specs->status());
+    }
+
+    /**
+     * @param ContainerInterface $container
+     * @return array
+     */
+    public function registerAutoloaders(ContainerInterface $container)
+    {
         $appDir      = $container->getParameter('kernel.root_dir');
         $autoloaders = [];
 
@@ -47,8 +68,8 @@ class KahlanCommand extends ContainerAwareCommand
             $autoloaders[] = include $relative;
         }
 
-        if (!$absolute = realpath(__DIR__ . '/../../../autoload.php')) {
-            $absolute = realpath(__DIR__ . '/../vendor/autoload.php');
+        if (!$absolute = realpath(__DIR__ . '/../../../../app/autoload.php')) {
+            $absolute = realpath(__DIR__ . '/../../../../vendor/autoload.php');
         }
 
         if ($absolute && $relative !== $absolute) {
@@ -62,28 +83,103 @@ class KahlanCommand extends ContainerAwareCommand
             exit(1);
         }
 
+        return $autoloaders;
+    }
+
+    /**
+     * @param array $autoloaders
+     * @return Kahlan
+     */
+    public function createSpecs(array $autoloaders)
+    {
         $box = box('kahlan', new Box());
 
         $box->service('suite.global', function() {
             return new Suite();
         });
 
-        $box->service('suite.container', function() use ($container) {
-            return $container;
-        });
-
-        $box->service('suite.client', function() use ($client) {
-            return $client;
-        });
-
         $specs = new Kahlan([
             'autoloader' => reset($autoloaders),
-            'suite'      => $box->get('suite.global'),
-            'container'  => $box->get('suite.container'),
-            'client'     => $box->get('suite.client')
+            'suite'      => $box->get('suite.global')
         ]);
-        $specs->loadConfig($_SERVER['argv']);
-        $specs->run();
-        exit($specs->status());
+
+        return $specs;
+    }
+
+    /**
+     * @param $specs
+     * @param $container
+     * @param $client
+     */
+    public function registerAdditionnalShortcuts($specs, $container)
+    {
+        Filter::register('registering.container', function($chain) use ($specs, $container) {
+            $root = $specs->suite();
+            $root->container = $container;
+            return $chain->next();
+        });
+        Filter::apply($specs, 'run', 'registering.container');
+
+        $this->registerServicesShortcuts($specs, $container);
+
+        $this->registerParameterShortcuts($specs, $container);
+
+        $client = new Browser();
+        Filter::register('registering.client', function($chain) use ($specs, $client) {
+            $root = $specs->suite();
+            $root->client = $client;
+            return $chain->next();
+        });
+        Filter::apply($specs, 'run', 'registering.client');
+    }
+
+    /**
+     * @param $specs
+     * @param $container
+     */
+    public function registerServicesShortcuts($specs, $container)
+    {
+        Filter::register('registering.getService', function($chain) use ($specs, $container) {
+            $root = $specs->suite();
+            $root->get = function ($path) use ($container) {
+                return $container->get($path);
+            };
+            return $chain->next();
+        });
+        Filter::apply($specs, 'run', 'registering.getService');
+
+        Filter::register('registering.hasService', function($chain) use ($specs, $container) {
+            $root = $specs->suite();
+            $root->has = function ($path) use ($container) {
+                return $container->has($path);
+            };
+            return $chain->next();
+        });
+        Filter::apply($specs, 'run', 'registering.hasService');
+    }
+
+    /**
+     * @param $specs
+     * @param $container
+     */
+    public function registerParameterShortcuts($specs, $container)
+    {
+        Filter::register('registering.getParameter', function($chain) use ($specs, $container) {
+            $root = $specs->suite();
+            $root->getParameter = function ($path) use ($container) {
+                return $container->getParameter($path);
+            };
+            return $chain->next();
+        });
+        Filter::apply($specs, 'run', 'registering.getParameter');
+
+        Filter::register('registering.hasParameter', function($chain) use ($specs, $container) {
+            $root = $specs->suite();
+            $root->hasParameter = function ($path) use ($container) {
+                return $container->hasParameter($path);
+            };
+            return $chain->next();
+        });
+        Filter::apply($specs, 'run', 'registering.hasParameter');
     }
 }
