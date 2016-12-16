@@ -1,9 +1,2 @@
-# Other Bundles
-/*
-!Elephantly/
-
-# Protecting bundle files
-!composer.json
-!.gitignore
-!LICENSE
-!README.md
+# couscous templates
+.couscous
