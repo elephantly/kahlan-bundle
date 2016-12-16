@@ -187,6 +187,15 @@ class KahlanCommand extends ContainerAwareCommand
             return $chain->next();
         });
         Filter::apply($specs, 'run', 'registering.hasService');
+
+        Filter::register('registering.getRequest', function($chain) use ($specs, $container) {
+            $root = $specs->suite();
+            $root->getRequest = function ($method, $url, $params) use ($container) {
+                return $container->get('kahlan.request_helper')->getRequest($method, $url, $params);
+            };
+            return $chain->next();
+        });
+        Filter::apply($specs, 'run', 'registering.getRequest');
     }
 
     /**
