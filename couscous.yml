@@ -3,8 +3,11 @@ baseUrl: http://elephantly.github.io/kahlan-bundle
 
 # Used to link to the GitHub project
 github:
-    user: Tiriel
+    user: elephantly
     repo: kahlan-bundle
 
 title: KahlanBundle
 subTitle: A Kahlan integration for Symfony.
+
+template:
+    url: https://github.com/CouscousPHP/Template-ReadTheDocs
