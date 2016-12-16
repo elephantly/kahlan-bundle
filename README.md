@@ -3,6 +3,7 @@ A ToolBox to use kahlan with symfony easily.
 
 ## Configuration :
 Simply register the bundle in Symfony's kernel like any other bundle:
+
 ```php
 <?php
 // app/AppKernel.php
@@ -33,6 +34,7 @@ Symfony's service container is available in every spec file with `$this->contain
 **Services shortcuts :**
 
 Every service registered in your Symfony application is available in spec files with these shortcuts :
+
 ```php
 <?php
 $this->has('my.awesome.service'); // To check is service is available
@@ -43,6 +45,7 @@ $this->get('my.awesome.service'); // To retrieve service
 **Parameters shortcuts :**
 
 Every parameter registered in your Symfony application is available in spec files with these shortcuts :
+
 ```php
 <?php
 $this->hasParameter('my.parameter'); // To check is parameter exists
@@ -59,6 +62,7 @@ Simply call it via `$this->getRequest()`.
 <?php
 public function getRequest($method = null, $url = null, array $parameters = array());
 ```
+
 - You can call it without arguments and it will return a blank new Request instance.
 - Or you can call it with arguments. First two are the only mandatory ones in this case.
   Request Helper will call the router to fill your Request object with proper attributes.
