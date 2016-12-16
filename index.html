@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KahlanBundle</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://elephantly.github.io/kahlan-bundle/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="http://elephantly.github.io/kahlan-bundle/css/theme-fixes.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+</head>
+<body class="wy-body-for-nav">
+
+    <div class="wy-grid-for-nav">
+
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-nav-search">
+                <a href="http://elephantly.github.io/kahlan-bundle/" class="fa fa-home"> KahlanBundle</a>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                                    </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+                        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="http://elephantly.github.io/kahlan-bundle/">KahlanBundle</a>
+            </nav>
+
+
+                        <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="main" class="document">
+                        <h1 id="kahlan-bundle">kahlan-bundle</h1>
+<p>A ToolBox to use kahlan with symfony easily.</p>
+<h2 id="configuration-">Configuration :</h2>
+<p>Simply register the bundle in Symfony's kernel like any other bundle:</p>
+<pre><code class="language-php">&lt;?php
+// app/AppKernel.php
+    public function registerBundles()
+    {
+        $bundles = array(
+            [...]
+            new Elephantly\KahlanBundle\KahlanBundle(),
+        );
+        [...]
+
+        return $bundles;
+    }</code></pre>
+<h2 id="usage-">Usage :</h2>
+<p>Check <a href="https://kahlan.github.io/docs/">Kahlan's documentation</a> for basic spec writing principles.</p>
+<p>Once your spec files are written, simply call <code>php app/console kahlan:run</code>. All options mentioned in Kahlan's documentation  are available.</p>
+<h3 id="added-features-">Added features :</h3>
+<p><strong>Service Container :</strong></p>
+<p>Symfony's service container is available in every spec file with <code>$this-&gt;container</code>.</p>
+<p><strong>Services shortcuts :</strong></p>
+<p>Every service registered in your Symfony application is available in spec files with these shortcuts :</p>
+<pre><code class="language-php">&lt;?php
+$this-&gt;has('my.awesome.service'); // To check is service is available
+$this-&gt;get('my.awesome.service'); // To retrieve service</code></pre>
+<p><strong>Parameters shortcuts :</strong></p>
+<p>Every parameter registered in your Symfony application is available in spec files with these shortcuts :</p>
+<pre><code class="language-php">&lt;?php
+$this-&gt;hasParameter('my.parameter'); // To check is parameter exists
+$this-&gt;getParameter('my.parameter'); // To retrieve parameter</code></pre>
+<p><strong>RequestHelper :</strong></p>
+<p>Should you ever need a Request object to give to some particular function, you can ask RequestHelper service.
+Simply call it via <code>$this-&gt;getRequest()</code>.</p>
+<pre><code class="language-php">&lt;?php
+public function getRequest($method = null, $url = null, array $parameters = array());</code></pre>
+<ul>
+<li>You can call it without arguments and it will return a blank new Request instance.</li>
+<li>Or you can call it with arguments. First two are the only mandatory ones in this case.
+Request Helper will call the router to fill your Request object with proper attributes.</li>
+<li>When given, third argument will be automatically added to <code>$request-&gt;query</code> or <code>$request-&gt;request</code>, depending on the method</li>
+</ul>
+<p><em>/!\ The second parameter, <code>$url</code>, is used with a route, relative to your website root.</em></p>
+<p><strong>Buzz Client</strong></p>
+<p><code>Buzz\Browser</code> is included as a shortcut in every spec file via <code>$this-&gt;client</code>. You can then make use of it's http-based methods like <code>get()</code>, <code>post()</code>...</p>
+<p>Check <a href="https://github.com/kriswallsmith/Buzz">Buzz Documentation</a> for more details.</p>
+                    </div>
+
+                    <footer>
+                        <hr/>
+                                                    <div role="contentinfo">
+                                <p>
+                                    Find KahlanBundle on <a href="https://github.com/elephantly/kahlan-bundle">GitHub</a>.
+                                </p>
+                            </div>
+                                                Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
+                    </footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="http://elephantly.github.io/kahlan-bundle/js/theme.js"></script>
+
+    <script>
+        $(function() {
+            // Syntax highlighting
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
+</body>
+</html>
