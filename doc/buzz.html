@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="https://elephantly.github.io/kahlan-bundle">
                                 Getting Started
                             </a>
@@ -47,8 +47,8 @@
                                 RequestHelper
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="https://elephantly.github.io/kahlan-bundle/doc/buzz.html">
                                 Buzz client
                             </a>
@@ -75,25 +75,9 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="kahlan-bundle">kahlan-bundle</h1>
-<p>A ToolBox to use kahlan with symfony easily.</p>
-<h2 id="configuration-">Configuration :</h2>
-<p>Simply register the bundle in Symfony's kernel like any other bundle:</p>
-<pre><code class="language-php">&lt;?php
-// app/AppKernel.php
-    public function registerBundles()
-    {
-        $bundles = array(
-            [...]
-            new Elephantly\KahlanBundle\KahlanBundle(),
-        );
-        [...]
-
-        return $bundles;
-    }</code></pre>
-<p>That's it!</p>
-<p><strong>Buzz Client</strong></p>
+                        <h2 id="buzz-client">Buzz Client</h2>
 <p><code>Buzz\Browser</code> is included as a shortcut in every spec file via <code>$this-&gt;client</code>. You can then make use of it's http-based methods like <code>get()</code>, <code>post()</code>...</p>
+<p>Please note that the entirety of Buzz is included with KahlanBundle. Feel free to use it like you want.</p>
 <p>Check <a href="https://github.com/kriswallsmith/Buzz">Buzz Documentation</a> for more details.</p>
                     </div>
 

@@ -23,14 +23,14 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="https://elephantly.github.io/kahlan-bundle">
                                 Getting Started
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="https://elephantly.github.io/kahlan-bundle/doc/usage.html">
                                 Usage
                             </a>
@@ -75,26 +75,42 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="kahlan-bundle">kahlan-bundle</h1>
-<p>A ToolBox to use kahlan with symfony easily.</p>
-<h2 id="configuration-">Configuration :</h2>
-<p>Simply register the bundle in Symfony's kernel like any other bundle:</p>
+                        <h2 id="usage-">Usage :</h2>
+<p>To write spec files, follow the indications provided in Kahlan documentation.
+You first have to create a folder named <code>spec</code> at the root of your project, on the same level as your <code>src</code>.
+You must then replicate your <code>src</code>'s folder architecture, and create a file named after each one of the original files you want to test, changing its extension to <code>.spec.php</code></p>
+<p><em>Example adapted from Kahlan Documentation :</em></p>
+<pre><code>├── spec
+│   └── AppBundle
+│       ├── Controller
+│       │   └── AppController.spec.php
+│       └── AppBundle.spec.php
+├── src
+│   └── AppBundle
+│       ├── Controller
+│       │   └── AppController.php
+│       └── AppBundle.php
+├── composer.json
+└── README.md</code></pre>
+<p>In those spec files, you will write your specs using the DSL syntax. Kahlan being Behaviour Driven, it provides functions that allow you to clearly describe what you expect your code to do.
+Simply declare a context for your class with a <code>describe()</code>, in which you will declare a subcontext for each function of your class.</p>
+<p><em>Example :</em></p>
 <pre><code class="language-php">&lt;?php
-// app/AppKernel.php
-    public function registerBundles()
-    {
-        $bundles = array(
-            [...]
-            new Elephantly\KahlanBundle\KahlanBundle(),
-        );
-        [...]
 
-        return $bundles;
-    }</code></pre>
-<p>That's it!</p>
-<p><strong>Buzz Client</strong></p>
-<p><code>Buzz\Browser</code> is included as a shortcut in every spec file via <code>$this-&gt;client</code>. You can then make use of it's http-based methods like <code>get()</code>, <code>post()</code>...</p>
-<p>Check <a href="https://github.com/kriswallsmith/Buzz">Buzz Documentation</a> for more details.</p>
+use Symfony\Component\HttpFoundation\Response;
+use AppBundle\AppController;
+
+describe('AppController', function () {
+    describe('indexAction', function () {
+        it('returns a Response object', function () {
+            $controller = new AppController();
+            $result     = $controller-&gt;indexAction();
+            expect($result)-&gt;toBeAnInstanceOf(Response::class);
+        });
+    });
+});</code></pre>
+<p>Check <a href="https://kahlan.github.io/docs/">Kahlan's documentation</a> for more on spec writing principles.</p>
+<p>Once your spec files are written, simply call <code>php app/console kahlan:run</code>. All options mentioned in Kahlan's documentation  are available.</p>
                     </div>
 
                     <footer>

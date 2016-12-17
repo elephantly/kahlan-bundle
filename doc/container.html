@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="https://elephantly.github.io/kahlan-bundle">
                                 Getting Started
                             </a>
@@ -35,8 +35,8 @@
                                 Usage
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="https://elephantly.github.io/kahlan-bundle/doc/container.html">
                                 Container
                             </a>
@@ -75,26 +75,31 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="kahlan-bundle">kahlan-bundle</h1>
-<p>A ToolBox to use kahlan with symfony easily.</p>
-<h2 id="configuration-">Configuration :</h2>
-<p>Simply register the bundle in Symfony's kernel like any other bundle:</p>
+                        <h2 id="service-container-">Service Container :</h2>
+<p>Symfony's service container is available in every spec file with <code>$this-&gt;container</code>.
+No <code>use</code> statement needed, no clas to extend from.</p>
+<h3 id="services-shortcuts-">Services shortcuts :</h3>
+<p>Every service registered in your Symfony application is available in spec files with these shortcuts :</p>
 <pre><code class="language-php">&lt;?php
-// app/AppKernel.php
-    public function registerBundles()
-    {
-        $bundles = array(
-            [...]
-            new Elephantly\KahlanBundle\KahlanBundle(),
-        );
-        [...]
+$this-&gt;has('my.awesome.service'); // To check is service is available
+$this-&gt;get('my.awesome.service'); // To retrieve service</code></pre>
+<h3 id="parameters-shortcuts-">Parameters shortcuts :</h3>
+<p>Every parameter registered in your Symfony application is available in spec files with these shortcuts :</p>
+<pre><code class="language-php">&lt;?php
+$this-&gt;hasParameter('my.parameter'); // To check is parameter exists
+$this-&gt;getParameter('my.parameter'); // To retrieve parameter</code></pre>
+<h4 id="tip-">Tip :</h4>
+<p>If you want to test a service, or if you need to use it multiple times in your spec file,
+register it as a global attribute of your spec by means of a <code>beforeAll()</code> at the beginning of your topmost context.</p>
+<p><em>Example :</em></p>
+<pre><code class="language-php">&lt;?php
 
-        return $bundles;
-    }</code></pre>
-<p>That's it!</p>
-<p><strong>Buzz Client</strong></p>
-<p><code>Buzz\Browser</code> is included as a shortcut in every spec file via <code>$this-&gt;client</code>. You can then make use of it's http-based methods like <code>get()</code>, <code>post()</code>...</p>
-<p>Check <a href="https://github.com/kriswallsmith/Buzz">Buzz Documentation</a> for more details.</p>
+describe('ClassToBeTested', function() {
+    beforeAll(function () {
+        $this-&gt;service = $this-&gt;get('my.awesome_service');
+    });
+    [...]
+});</code></pre>
                     </div>
 
                     <footer>
