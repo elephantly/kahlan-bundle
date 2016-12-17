@@ -23,10 +23,3 @@ Simply register the bundle in Symfony's kernel like any other bundle:
 ```
 
 That's it!
-
-
-**Buzz Client**
-
-`Buzz\Browser` is included as a shortcut in every spec file via `$this->client`. You can then make use of it's http-based methods like `get()`, `post()`...
-
-Check [Buzz Documentation](https://github.com/kriswallsmith/Buzz) for more details.
