@@ -1,5 +1,5 @@
 # Base URL of the published website
-baseUrl: http://elephantly.github.io/kahlan-bundle
+baseUrl: https://elephantly.github.io/kahlan-bundle
 
 # Used to link to the GitHub project
 github:
@@ -11,3 +11,24 @@ subTitle: A Kahlan integration for Symfony.
 
 template:
     url: https://github.com/CouscousPHP/Template-ReadTheDocs
+
+menu:
+    items:
+        home:
+            text: Getting Started
+            relativeUrl:
+        usage:
+            text: Usage
+            relativeUrl: doc/usage.html
+        container:
+            text: Container
+            relativeUrl: doc/container.html
+        request:
+            text: RequestHelper
+            relativeUrl: doc/request.html
+        buzz:
+            text: Buzz client
+            relativeUrl: doc/buzz.html
+        cheatsheet:
+            text: Cheatsheet
+            relativeUrl: doc/cheatsheet.html
