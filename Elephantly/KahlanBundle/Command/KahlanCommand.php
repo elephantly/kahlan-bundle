@@ -66,13 +66,10 @@ class KahlanCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $container   = $this->getContainer();
-
         $autoloaders = $this->registerAutoloaders($container);
-
-        $specs = $this->createSpecs($autoloaders);
+        $specs       = $this->createSpecs($autoloaders);
 
         $specs->loadConfig($_SERVER['argv']);
-
         $this->registerAdditionnalShortcuts($specs, $container);
 
         $specs->run();
@@ -92,7 +89,7 @@ class KahlanCommand extends ContainerAwareCommand
 
         if ($composerPath = realpath($appDir . '/../composer.json')) {
             $composerJson = json_decode(file_get_contents($composerPath), true);
-            $vendorDir = isset($composerJson['vendor-dir']) ? $composerJson['vendor-dir'] : $vendorDir;
+            $vendorDir    = isset($composerJson['vendor-dir']) ? $composerJson['vendor-dir'] : $vendorDir;
         }
 
         if ($relative = realpath($appDir . "/../{$vendorDir}/autoload.php")) {
@@ -145,19 +142,18 @@ class KahlanCommand extends ContainerAwareCommand
     public function registerAdditionnalShortcuts($specs, $container)
     {
         Filter::register('registering.container', function($chain) use ($specs, $container) {
-            $root = $specs->suite();
+            $root            = $specs->suite();
             $root->container = $container;
             return $chain->next();
         });
         Filter::apply($specs, 'run', 'registering.container');
 
         $this->registerServicesShortcuts($specs, $container);
-
         $this->registerParameterShortcuts($specs, $container);
 
         $client = new Browser();
         Filter::register('registering.client', function($chain) use ($specs, $client) {
-            $root = $specs->suite();
+            $root         = $specs->suite();
             $root->client = $client;
             return $chain->next();
         });
@@ -171,7 +167,7 @@ class KahlanCommand extends ContainerAwareCommand
     public function registerServicesShortcuts($specs, $container)
     {
         Filter::register('registering.getService', function($chain) use ($specs, $container) {
-            $root = $specs->suite();
+            $root      = $specs->suite();
             $root->get = function ($path) use ($container) {
                 return $container->get($path);
             };
@@ -180,7 +176,7 @@ class KahlanCommand extends ContainerAwareCommand
         Filter::apply($specs, 'run', 'registering.getService');
 
         Filter::register('registering.hasService', function($chain) use ($specs, $container) {
-            $root = $specs->suite();
+            $root      = $specs->suite();
             $root->has = function ($path) use ($container) {
                 return $container->has($path);
             };
@@ -189,7 +185,7 @@ class KahlanCommand extends ContainerAwareCommand
         Filter::apply($specs, 'run', 'registering.hasService');
 
         Filter::register('registering.getRequest', function($chain) use ($specs, $container) {
-            $root = $specs->suite();
+            $root             = $specs->suite();
             $root->getRequest = function ($method, $url, $params) use ($container) {
                 return $container->get('kahlan.request_helper')->getRequest($method, $url, $params);
             };
@@ -205,7 +201,7 @@ class KahlanCommand extends ContainerAwareCommand
     public function registerParameterShortcuts($specs, $container)
     {
         Filter::register('registering.getParameter', function($chain) use ($specs, $container) {
-            $root = $specs->suite();
+            $root               = $specs->suite();
             $root->getParameter = function ($path) use ($container) {
                 return $container->getParameter($path);
             };
@@ -214,7 +210,7 @@ class KahlanCommand extends ContainerAwareCommand
         Filter::apply($specs, 'run', 'registering.getParameter');
 
         Filter::register('registering.hasParameter', function($chain) use ($specs, $container) {
-            $root = $specs->suite();
+            $root               = $specs->suite();
             $root->hasParameter = function ($path) use ($container) {
                 return $container->hasParameter($path);
             };
