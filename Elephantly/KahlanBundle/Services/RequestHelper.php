@@ -43,7 +43,7 @@ class RequestHelper
         $query      = array();
         if ('GET' == $method && !isset($parsedUrl['query'])) {
             $query = $parameters;
-        } else if (null !== $parsedUrl['query']) {
+        } else if (isset($parsedUrl['query']) && null !== $parsedUrl['query']) {
             $query = null !== parse_str($parsedUrl['query']) ? : array();
         }
 
