@@ -16,8 +16,8 @@ App.main = function(){
         });
     }
 
-    var current = window.location.pathname.substring(1, window.location.pathname.length);
-    $('nav li[data-relative="'+current+'"]').addClass('current');
+    var current = window.location.href;
+    $('nav a[href="'+current+'"]').closest('li').addClass('current');
 }
 
 App.main();
