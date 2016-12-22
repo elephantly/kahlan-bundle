@@ -10,7 +10,7 @@ title: KahlanBundle
 subTitle: A Kahlan integration for Symfony.
 
 template:
-    url: https://github.com/CouscousPHP/Template-ReadTheDocs
+    url: https://github.com/elephantly/ElephantlyCouscous
 
 menu:
     items:

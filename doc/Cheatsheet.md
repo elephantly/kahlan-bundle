@@ -1,6 +1,3 @@
----
-currentMenu: cheatsheet
----
 ## Command options
 
 ```shell

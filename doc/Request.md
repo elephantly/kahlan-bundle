@@ -1,6 +1,3 @@
----
-currentMenu: request
----
 ## RequestHelper :
 
 Should you ever need a Request object to give to some particular function, you can ask RequestHelper service.

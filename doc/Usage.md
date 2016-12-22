@@ -1,6 +1,3 @@
----
-currentMenu: usage
----
 ## Usage :
 
 To write spec files, follow the indications provided in Kahlan documentation.

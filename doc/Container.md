@@ -1,6 +1,3 @@
----
-currentMenu: container
----
 ## Service Container :
 
 Symfony's service container is available in every spec file with `$this->container`.

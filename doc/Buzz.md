@@ -1,6 +1,3 @@
----
-currentMenu: buzz
----
 ## Buzz Client
 
 `Buzz\Browser` is included as a shortcut in every spec file via `$this->client`. You can then make use of it's http-based methods like `get()`, `post()`...
