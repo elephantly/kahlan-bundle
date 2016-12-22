@@ -21,5 +21,6 @@ Simply register the bundle in Symfony's kernel like any other bundle:
 
 That's it!
 
-*Full documentation: [Elephantly/Kahlan-Bundle](https://elephantly.github.io/kahlan-bundle/)
+*Full documentation: [Elephantly/Kahlan-Bundle](https://elephantly.github.io/kahlan-bundle/)*
+
 *Documentation powered by [Couscous](http://couscous.io/) with [Elephantly Template](https://github.com/elephantly/ElephantlyCouscous)*
