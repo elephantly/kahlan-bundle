@@ -1,7 +1,6 @@
 code {
   max-width: 100%;
   overflow-x: scroll;
-  display: block;
 }
 .panel {
   background-color: #606c76;
