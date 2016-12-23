@@ -18,6 +18,10 @@ App.main = function(){
 
     var current = window.location.href;
     $('nav a[href="'+current+'"]').closest('li').addClass('current');
+
+
+    // Syntax highlighting
+    hljs.initHighlightingOnLoad();
 }
 
 App.main();
