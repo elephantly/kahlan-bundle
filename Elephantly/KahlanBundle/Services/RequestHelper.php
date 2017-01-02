@@ -39,7 +39,7 @@ class RequestHelper
     public function getRequest($method = null, $url = null, array $parameters = array())
     {
         try {
-            $object = new Request();
+            $object  = new Request();
             $object->setMethod($method);
             $context = new RequestContext();
             $context->fromRequest($object);
@@ -49,13 +49,14 @@ class RequestHelper
             $method     = null == $method ? 'GET' : strtoupper($method);
 
             $query      = array();
-            if ('GET' == $method && !isset($parsedUrl['query'])) {
+            $request    = array();
+            if ('GET' == $method) {
                 $query = $parameters;
-            } else if (isset($parsedUrl['query']) && null !== $parsedUrl['query']) {
-                $query = null !== parse_str($parsedUrl['query']) ? : array();
+            } else if ('GET' == $method && isset($parsedUrl['query']) && null !== $parsedUrl['query']) {
+                $query = null !== parse_str($parsedUrl['query']) ? parse_str($parsedUrl['query']) : array();
+            } else if ('POST' == $method || 'PUT' == $method) {
+                $request = $parameters;
             }
-
-            $request    = ('POST' || 'PUT') == $method ? $parameters : array() ;
 
             $attributes = isset($parsedUrl['path']) && null !== $parsedUrl['path'] ? $this->router->match($parsedUrl['path']) : array();
 
