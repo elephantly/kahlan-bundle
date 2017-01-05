@@ -12,7 +12,7 @@
         "php": ">=5.4",
         "symfony/symfony": "^2.7",
         "kriswallsmith/buzz":"^0.15",
-        "kahlan/kahlan": "dev"
+        "kahlan/kahlan": "~3.1"
     },
     "autoload": {
         "psr-0": {
