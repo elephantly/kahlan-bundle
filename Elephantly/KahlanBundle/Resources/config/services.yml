@@ -2,3 +2,10 @@ services:
     kahlan.request_helper:
         class: Elephantly\KahlanBundle\Services\RequestHelper
         arguments: [ '@router' ]
+
+    kahlan.class_parser:
+        class: Elephantly\KahlanBundle\Services\ClassParser
+
+    kahlan.spec_builder:
+    	class: Elephantly\KahlanBundle\Services\SpecBuilder
+    	arguments: ['@kahlan.class_parser']
