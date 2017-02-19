@@ -51,11 +51,25 @@ class ClassParser
         $this->map = ClassMapGenerator::createMap($dir);
     }
 
-    public function createTree()
+    /**
+     * @param string $dir
+     */
+    public function createTree($dir = '')
     {
         if (empty($this->map)) {
-            throw new \MapNotFoundException('You must generate map before generating tree');
+            if ('' == $dir) {
+                throw new \MapNotFoundException('You must generate map before generating tree or give directory to this method.');
+            }
+            $this->createMap($dir);
         }
+
+        $tree = array();
+
         $classes = array_keys($this->map);
+        foreach ($classes as $class) {
+            $methods      = get_class_methods($class);
+            $functions    = array_fill(0, count($methods), 'method');
+            $tree[$class] = array_combine($functions, $methods);
+        }
     }
 }
