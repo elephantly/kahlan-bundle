@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef110c96-0e5d-4ed0-a65b-1bf832d18fd4" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Helper/RequestHelper.spec.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/Elphtly/KahlanBundle/Services/RequestHelper.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Elephantly/KahlanBundle/Services/ClassParser.php" afterPath="$PROJECT_DIR$/Elephantly/KahlanBundle/Services/ClassParser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/app/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/app/SymfonyRequirements.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/app/config/video/elastica.yml" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/app/config/video/elastica.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/composer.json" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/composer.lock" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Controller/VideoController.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Controller/VideoController.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Helper/CrudHelper.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Helper/CrudHelper.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Helper/Providers/BrightcoveProvider.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Helper/Providers/BrightcoveProvider.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Helper/Providers/DailymotionProvider.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/spec/Lprs/AppBundle/Helper/Providers/DailymotionProvider.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Controller/VideoController.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Controller/VideoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/ArrayableEntity.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/ArrayableEntity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/CuePoint.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/CuePoint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/FileMaster.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/FileMaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Geo.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Geo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Image.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/MiscArrayableEntity.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/MiscArrayableEntity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Owner.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Owner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Player.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Sacem.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Sacem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Schedule.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Schedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Tag.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Tag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Text.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Text.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/User.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Usergroup.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Usergroup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Video.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Entity/Video.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Constants.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Constants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/CrudHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/CrudHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Elastic/ElasticFinderHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Elastic/ElasticFinderHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Elastic/ElasticHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Elastic/ElasticHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Elastic/ElasticQueryHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Elastic/ElasticQueryHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/GetterHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/GetterHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/HydratorHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/HydratorHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/ProviderHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/ProviderHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/AbstractProvider.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/AbstractProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/BrightcoveProvider.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/BrightcoveProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/DailymotionProvider.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/DailymotionProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/ProviderInterface/VideoProviderInterface.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Helper/Providers/ProviderInterface/VideoProviderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Resources/config/services/api_services.yml" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Resources/config/services/api_services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Resources/config/services/elastic_services.yml" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Resources/config/services/elastic_services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Resources/config/services/provider_services.yml" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/src/Lprs/AppBundle/Resources/config/services/provider_services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/doctrine/annotations/CHANGELOG.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/doctrine/annotations/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/CachedReader.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/CachedReader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/Elephantly/KahlanBundle/Services/RequestHelper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/Elephantly/KahlanBundle/Services/RequestHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/README.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/couscous.yml" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/couscous.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Buzz.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Buzz.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Cheatsheet.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Cheatsheet.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Container.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Container.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Request.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Request.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Usage.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/elephantly/kahlan-bundle/doc/Usage.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/.travis.yml" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/CHANGELOG.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/README.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Fixture/Jit/Parser/Heredoc.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Fixture/Jit/Parser/Heredoc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Fixture/Jit/Parser/Heredoc.txt" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Fixture/Jit/Parser/Heredoc.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Given.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Given.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Jit/Parser.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Jit/Parser.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Matcher/ToThrow.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Matcher/ToThrow.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Plugin/Quit.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Plugin/Quit.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Suite.spec.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/spec/Suite/Suite.spec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Arg.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Arg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Cli/Kahlan.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Cli/Kahlan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Jit/Parser.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Jit/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Jit/TokenStream.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Jit/TokenStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Plugin/Call/Message.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Plugin/Call/Message.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Reporter/Terminal.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Reporter/Terminal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Specification.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Specification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Suite.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/Suite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/functions.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/init.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/kahlan/kahlan/src/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/ChangeLog-5.7.md" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/ChangeLog-5.7.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/phpunit" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/phpunit" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/phpunit.xml" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/phpunit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/src/Framework/Assert.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/src/Framework/Assert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/src/Runner/Version.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/phpunit/phpunit/src/Runner/Version.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Composer/ScriptHandler.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Composer/ScriptHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/LICENSE" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/bin/build.sh" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/bin/build.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/bin/build_bootstrap.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/bin/build_bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/bin/build_demo.sh" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/bin/build_demo.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/skeleton/app/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/sensio/distribution-bundle/Resources/skeleton/app/SymfonyRequirements.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/CHANGES" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/CHANGES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/VERSION" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/VERSION" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/composer.json" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/doc/overview.rst" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/doc/overview.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/doc/sending.rst" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/doc/sending.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MailTransport.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MailTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Message.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Message.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/MailboxHeader.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/MailboxHeader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMessage.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMessage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMimeEntity.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMimeEntity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ThrottlerPlugin.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ThrottlerPlugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DKIMSigner.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DKIMSigner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DomainKeySigner.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DomainKeySigner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/MailTransport.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/MailTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/phpunit.xml.dist" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/ByteStream/FileByteStreamAcceptanceTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/ByteStream/FileByteStreamAcceptanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/DependencyContainerAcceptanceTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/DependencyContainerAcceptanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/AbstractStreamBufferAcceptanceTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/AbstractStreamBufferAcceptanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/BasicSocketAcceptanceTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/BasicSocketAcceptanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/ProcessAcceptanceTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/ProcessAcceptanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SocketTimeoutTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SocketTimeoutTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SslSocketAcceptanceTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SslSocketAcceptanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/TlsSocketAcceptanceTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/TlsSocketAcceptanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/bug/Swift/BugFileByteStreamConsecutiveReadCallsTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/bug/Swift/BugFileByteStreamConsecutiveReadCallsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/ByteStream/ArrayByteStreamTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/ByteStream/ArrayByteStreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterStream/ArrayCharacterStreamTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterStream/ArrayCharacterStreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/DependencyContainerTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/DependencyContainerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/CommandEventTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/CommandEventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/ResponseEventTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/ResponseEventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SendEventTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SendEventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SimpleEventDispatcherTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SimpleEventDispatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportChangeEventTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportChangeEventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportExceptionEventTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportExceptionEventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/ArrayKeyCacheTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/ArrayKeyCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/SimpleKeyCacheInputStreamTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/SimpleKeyCacheInputStreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/AbstractMimeEntityTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/AbstractMimeEntityTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/MimePartTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/MimePartTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderFactoryTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderFactoryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderSetTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderSetTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/AntiFloodPluginTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/AntiFloodPluginTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/BandwidthMonitorPluginTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/BandwidthMonitorPluginTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/LoggerPluginTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/LoggerPluginTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/PopBeforeSmtpPluginTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/PopBeforeSmtpPluginTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HitReporterTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HitReporterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HtmlReporterTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HtmlReporterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/EsmtpTransportTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/EsmtpTransportTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/LoadBalancedTransportTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/LoadBalancedTransportTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/MailTransportTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/MailTransportTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/SendmailTransportTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/SendmailTransportTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/StreamBufferTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/StreamBufferTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/DebugHandlerPass.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/DebugHandlerPass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/symfony/monolog-bundle/MonologBundle.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/symfony/monolog-bundle/MonologBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/CHANGELOG" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/CHANGELOG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/composer.json" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/doc/functions/range.rst" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/doc/functions/range.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/ext/twig/php_twig.h" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/ext/twig/php_twig.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/ext/twig/twig.c" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/ext/twig/twig.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/BaseNodeVisitor.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/BaseNodeVisitor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Cache/Filesystem.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Cache/Filesystem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Cache/Null.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Cache/Null.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Environment.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Environment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/ExpressionParser.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/ExpressionParser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Extension.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Extension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Extension/Staging.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Extension/Staging.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Lexer.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Lexer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/Array.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/Array.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/Chain.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/Chain.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/Filesystem.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/Filesystem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/String.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Loader/String.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Node/Expression/GetAttr.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Node/Expression/GetAttr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/Escaper.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/Escaper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/Optimizer.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/Optimizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/SafeAnalysis.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/SafeAnalysis.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/Sandbox.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/NodeVisitor/Sandbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Parser.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Profiler/Node/EnterProfile.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Profiler/Node/EnterProfile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Profiler/Node/LeaveProfile.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Profiler/Node/LeaveProfile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/SimpleFilter.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/SimpleFilter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/SimpleFunction.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/SimpleFunction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/SimpleTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/SimpleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Template.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/lib/Twig/Template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/test/Twig/Tests/Cache/FilesystemTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/test/Twig/Tests/Cache/FilesystemTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/test/Twig/Tests/TemplateTest.php" afterPath="$PROJECT_DIR$/../../lprs/www/morpheus/vendor/twig/twig/test/Twig/Tests/TemplateTest.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="KahlanGenerateCommand.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Command/KahlanGenerateCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#51#116#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classmap_lite.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classmap_lite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="109" lean-forward="false" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassParser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Services/ClassParser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="769">
+              <caret line="69" column="54" lean-forward="false" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeObject.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeObject.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tree.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/Tree.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="874">
+              <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeNamespace.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeNamespace.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeClass.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeClass.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpecBuilder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Services/SpecBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#88#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>valid</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Elephantly/KahlanBundle/Services/ClassParser.php" />
+        <option value="$PROJECT_DIR$/classmap_lite.php" />
+        <option value="$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeNamespace.php" />
+        <option value="$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeClass.php" />
+        <option value="$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeObjectInterface.php" />
+        <option value="$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeObject.php" />
+        <option value="$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/Tree.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1366" />
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elephantly" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahlanBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elephantly" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahlanBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elephantly" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahlanBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elephantly" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahlanBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kahlan-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elephantly" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahlanBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Command" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lprs/www/morpheus" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/../" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef110c96-0e5d-4ed0-a65b-1bf832d18fd4" name="Default" comment="" />
+      <created>1487587356669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1487587356669</updated>
+      <workItem from="1487587359530" duration="100000" />
+      <workItem from="1487587670085" duration="6767000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6867000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1366" y="24" width="1920" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Command/KahlanGenerateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#116#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Services/ClassParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Services/SpecBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Command/KahlanGenerateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#116#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Services/SpecBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classmap_lite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="109" lean-forward="false" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeNamespace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeObjectInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Services/ClassParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="69" column="54" lean-forward="false" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/TreeObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/SPL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="255" column="20" lean-forward="false" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lprs/www/morpheus/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="156" column="43" lean-forward="false" selection-start-line="156" selection-start-column="43" selection-end-line="156" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elephantly/KahlanBundle/Entity/Tree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
