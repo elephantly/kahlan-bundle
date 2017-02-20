@@ -1,5 +1,7 @@
 <?php
 
+namespace Elephantly\KahlanBundle\Entity;
+
 /**
  * Created by PhpStorm.
  * User: benjamin
@@ -43,7 +45,17 @@ class Tree implements TreeObjectInterface
      */
     public function getName()
     {
-        return 'Tree';
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -147,5 +159,4 @@ class Tree implements TreeObjectInterface
 
         return $removed;
     }
-
 }

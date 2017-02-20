@@ -1,12 +1,13 @@
 <?php
 
+namespace Elephantly\KahlanBundle\Entity;
 /**
  * Created by PhpStorm.
  * User: benjamin
  * Date: 20/02/17
  * Time: 13:56
  */
-interface TreeObjectInterface extends RecursiveIterator
+interface TreeObjectInterface extends \RecursiveIterator
 {
     /**
      * @return mixed
@@ -42,15 +43,4 @@ interface TreeObjectInterface extends RecursiveIterator
      * @return mixed
      */
     public function removeChild(TreeObjectInterface $child);
-
-    /**
-     * @return mixed
-     */
-    public function getFqcn();
-
-    /**
-     * @param $fcqn
-     * @return mixed
-     */
-    public function setFqcn($fcqn);
 }

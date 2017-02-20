@@ -9,6 +9,8 @@
 namespace Elephantly\KahlanBundle\Services;
 
 
+use Elephantly\KahlanBundle\Entity\Tree;
+use Elephantly\KahlanBundle\Entity\TreeNamespace;
 use Symfony\Component\ClassLoader\ClassMapGenerator;
 
 /**
@@ -63,11 +65,27 @@ class ClassParser
             $this->createMap($dir);
         }
 
-        $tree = array();
+        //--------- TEMPORARY ----------//
+        $tree = new Tree();
 
         $classes = array_keys($this->map);
         foreach ($classes as $class) {
-            $tree[$class] = get_class_methods($class);
+            $classParts = explode('\\', $class);
+            $className = array_pop($classParts);
+            $fqcn = array();
+
+            do {
+                $name      = array_shift($classParts);
+                $namespace = new TreeNamespace($name);
+                array_push($fqcn, $namespace);
+            } while (!empty($classParts));
+
+            array_push($fqcn, $className);
+
+            for ($i = 0; $i < count($fqcn); $i++) {
+                $fqcn[$i]->addChild($fqcn[$i+1]);
+                $fqcn[$i+1]->setParent($fqcn[$i]);
+            }
         }
     }
 }

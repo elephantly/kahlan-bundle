@@ -1,5 +1,7 @@
 <?php
 
+namespace Elephantly\KahlanBundle\Entity;
+
 /**
  * Created by PhpStorm.
  * User: benjamin
@@ -17,7 +19,7 @@ class TreeNamespace extends TreeObject
     public function __construct($name, TreeObjectInterface $parent = null, $children = array())
     {
         if (!($parent instanceof (Tree::class || TreeNamespace::class))) {
-            throw new InvalidArgumentException('TreeNamespaces can only have Trees or TreeNamespaces parents');
+            throw new \InvalidArgumentException('TreeNamespaces can only have Trees or TreeNamespaces parents');
         }
         parent::__construct($name, $parent, $children);
         $this->type = self::TYPE_NS;

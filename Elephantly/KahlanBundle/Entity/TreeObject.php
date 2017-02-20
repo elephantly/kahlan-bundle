@@ -1,12 +1,14 @@
 <?php
 
+namespace Elephantly\KahlanBundle\Entity;
+
 /**
  * Created by PhpStorm.
  * User: benjamin
  * Date: 20/02/17
  * Time: 14:59
  */
-abstract class TreeObject extends Tree
+abstract class TreeObject extends Tree implements NamespacedTreeObjectInterface
 {
     /**
      * @var
@@ -24,7 +26,7 @@ abstract class TreeObject extends Tree
      * @param TreeObjectInterface|null $parent
      * @param array $children
      */
-    public function __construct($name, TreeObjectInterface $parent = null, $children = array())
+    public function __construct($name, NamespacedTreeObjectInterface $parent = null, $children = array())
     {
         parent::__construct($name, $children);
 
@@ -59,24 +61,6 @@ abstract class TreeObject extends Tree
     public function setParent(TreeObjectInterface $parent)
     {
         $this->parent = $parent;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     * @return TreeObject
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-        return $this;
     }
 
     /**
