@@ -6,48 +6,35 @@
  * Date: 20/02/17
  * Time: 14:59
  */
-abstract class TreeObject implements TreeObjectInterface
+abstract class TreeObject extends Tree
 {
-    const TYPE_NS    = 1;
-    const TYPE_CLASS = 2;
-
-    /**
-     * @var
-     */
-    protected $type;
-
-    /**
-     * @var
-     */
-    protected $children = array();
-
     /**
      * @var
      */
     protected $parent;
 
     /**
-     * @return mixed
+     * @var string
      */
-    public function getType()
-    {
-        return $this->type;
-    }
+    protected $fqcn;
 
     /**
-     * @return bool
+     * TreeObject constructor.
+     * @param array $name
+     * @param TreeObjectInterface|null $parent
+     * @param array $children
      */
-    public function hasChildren()
+    public function __construct($name, TreeObjectInterface $parent = null, $children = array())
     {
-        return !empty($this->children);
-    }
+        parent::__construct($name, $children);
 
-    /**
-     * @return mixed
-     */
-    public function getChildren()
-    {
-        return $this->children;
+        $this->setFqcn($name);
+
+        if (null !== $parent) {
+            $this->parent = $parent;
+            $parent->addChild($this);
+            $this->setFqcn($parent->getFqcn().$name);
+        }
     }
 
     /**
@@ -72,6 +59,45 @@ abstract class TreeObject implements TreeObjectInterface
     public function setParent(TreeObjectInterface $parent)
     {
         $this->parent = $parent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     * @return TreeObject
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFqcn()
+    {
+        return $this->fqcn;
+    }
+
+    /**
+     * @param string $fqcn
+     */
+    public function setFqcn($fqcn)
+    {
+        if (self::TYPE_CLASS !== $this->type) {
+            $fqcn .= '\\';
+        }
+        $this->fqcn .= $fqcn;
+
+        return $this;
     }
 
 }

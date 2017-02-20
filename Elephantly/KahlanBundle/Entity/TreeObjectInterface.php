@@ -6,8 +6,13 @@
  * Date: 20/02/17
  * Time: 13:56
  */
-interface TreeObjectInterface
+interface TreeObjectInterface extends RecursiveIterator
 {
+    /**
+     * @return mixed
+     */
+    public function getName();
+
     /**
      * @return mixed
      */
@@ -26,10 +31,26 @@ interface TreeObjectInterface
     /**
      * @return mixed
      */
-    public function hasParent();
+    public function hasChild(TreeObjectInterface $child);
 
     /**
      * @return mixed
      */
-    public function getParent();
+    public function addChild(TreeObjectInterface $child);
+
+    /**
+     * @return mixed
+     */
+    public function removeChild(TreeObjectInterface $child);
+
+    /**
+     * @return mixed
+     */
+    public function getFqcn();
+
+    /**
+     * @param $fcqn
+     * @return mixed
+     */
+    public function setFqcn($fcqn);
 }
