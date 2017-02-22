@@ -10,7 +10,9 @@ namespace Elephantly\KahlanBundle\Services;
 
 
 use Elephantly\KahlanBundle\Entity\Tree;
+use Elephantly\KahlanBundle\Entity\TreeClass;
 use Elephantly\KahlanBundle\Entity\TreeNamespace;
+use Elephantly\KahlanBundle\Entity\TreeObjectInterface;
 use Symfony\Component\ClassLoader\ClassMapGenerator;
 
 /**
@@ -66,26 +68,62 @@ class ClassParser
         }
 
         //--------- TEMPORARY ----------//
-        $tree = new Tree();
-
+        $tree = new Tree($dir);
+        // Filtering only FQCNs
         $classes = array_keys($this->map);
-        foreach ($classes as $class) {
-            $classParts = explode('\\', $class);
-            $className = array_pop($classParts);
-            $fqcn = array();
-
-            do {
-                $name      = array_shift($classParts);
-                $namespace = new TreeNamespace($name);
-                array_push($fqcn, $namespace);
-            } while (!empty($classParts));
-
-            array_push($fqcn, $className);
-
-            for ($i = 0; $i < count($fqcn); $i++) {
-                $fqcn[$i]->addChild($fqcn[$i+1]);
-                $fqcn[$i+1]->setParent($fqcn[$i]);
+        // Parsing FQCNs
+        foreach ($classes as &$class) {
+            $class     = explode('\\', $class);
+            for ($i = count($class) -1; $i > 0; $i--) {
+                $j = $i-1;
+                $class[$j] = array($class[$j] => $class[$i]);
+                unset($class[$i]);
             }
         }
+
+        for ($i = 1; $i < count($classes); $i++) {
+            $this->compare($classes[0], $classes[$i]);
+        }
+        $map = $classes[0][0];
+
+        // Defining relationships
+        $this->setParentAndChildren($map);
+
+        return $tree;
+    }
+
+    public function setParentAndChildren(array &$array, &$parent = null)
+    {
+        foreach ($array as &$row) {
+            if (is_array($row)) {
+
+            }
+            $row->setParent($parent);
+            $parent->addChild($row);
+        }
+    }
+
+    public function compare(&$var1, $var2) {
+        if (is_array($var1) && is_array($var2)) {
+            foreach ($var2 as $key => $row) {
+                if (array_key_exists($key, $var1)) {
+                    $this->compare($var1[$key], $var2[$key]);
+                } else {
+                    foreach ($var2 as $subkey => $value) {
+                        $var1[$subkey] = $value;
+                        unset($var2[$subkey]);
+                    }
+                }
+            }
+        } else {
+            if (is_array($var1)) {
+                $var1 = array_merge($var1, array($var2));
+            } else if (is_array($var2)) {
+                $var1 = array_merge(array($var1), $var2);
+            } else {
+                $var1 = array($var1, $var2);
+            }
+        }
+        unset($var2);
     }
 }

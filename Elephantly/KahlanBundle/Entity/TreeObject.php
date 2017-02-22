@@ -11,7 +11,7 @@ namespace Elephantly\KahlanBundle\Entity;
 abstract class TreeObject extends Tree implements NamespacedTreeObjectInterface
 {
     /**
-     * @var
+     * @var TreeObjectInterface
      */
     protected $parent;
 
