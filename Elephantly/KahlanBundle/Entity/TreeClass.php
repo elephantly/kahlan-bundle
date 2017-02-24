@@ -17,7 +17,7 @@ class TreeClass extends TreeObject
 
     /**
      * TreeClass constructor.
-     * @param array $name
+     * @param string $name
      * @param TreeObjectInterface|null $parent
      * @param array $children
      */

@@ -31,6 +31,7 @@ class Tree implements TreeObjectInterface
 
     /**
      * Tree constructor.
+     * @param string $name
      * @param array $data
      */
     public function __construct($name = '', array $data = array())

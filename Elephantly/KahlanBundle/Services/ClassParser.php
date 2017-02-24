@@ -87,20 +87,9 @@ class ClassParser
         $map = $classes[0][0];
 
         // Defining relationships
-        $this->setParentAndChildren($map);
+        $this->setParentAndChildren($map, $tree);
 
         return $tree;
-    }
-
-    public function setParentAndChildren(array &$array, &$parent = null)
-    {
-        foreach ($array as &$row) {
-            if (is_array($row)) {
-
-            }
-            $row->setParent($parent);
-            $parent->addChild($row);
-        }
     }
 
     public function compare(&$var1, $var2) {
@@ -125,5 +114,22 @@ class ClassParser
             }
         }
         unset($var2);
+    }
+
+    public function setParentAndChildren(array &$array, &$parent)
+    {
+        foreach ($array as $key => &$value) {
+            if (is_array($value)) {
+                $this->setParentAndChildren($value, $array);
+            }
+            if (is_string($key)) {
+                $key = new TreeNamespace($key);
+            }
+            if (is_string($value)) {
+                $value = new TreeClass($value);
+            }
+            $key->setParent($parent);
+            $parent->addChild($key);
+        }
     }
 }

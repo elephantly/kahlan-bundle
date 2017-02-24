@@ -22,7 +22,7 @@ abstract class TreeObject extends Tree implements NamespacedTreeObjectInterface
 
     /**
      * TreeObject constructor.
-     * @param array $name
+     * @param string $name
      * @param TreeObjectInterface|null $parent
      * @param array $children
      */

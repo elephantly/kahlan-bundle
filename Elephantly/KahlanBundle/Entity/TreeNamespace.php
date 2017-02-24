@@ -12,7 +12,7 @@ class TreeNamespace extends TreeObject
 {
     /**
      * TreeNamespace constructor.
-     * @param array $name
+     * @param string $name
      * @param TreeObjectInterface|null $parent
      * @param array $children
      */
