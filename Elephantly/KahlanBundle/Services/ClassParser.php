@@ -8,7 +8,6 @@
 
 namespace Elephantly\KahlanBundle\Services;
 
-
 use Elephantly\KahlanBundle\Entity\Tree;
 use Elephantly\KahlanBundle\Entity\TreeClass;
 use Elephantly\KahlanBundle\Entity\TreeNamespace;
@@ -67,7 +66,7 @@ class ClassParser
             $this->createMap($dir);
         }
 
-        //--------- TEMPORARY ----------//
+        //--------- TODO: Factorize/clean ----------//
         $tree = new Tree($dir);
         // Filtering only FQCNs
         $classes = array_keys($this->map);
@@ -92,6 +91,11 @@ class ClassParser
         return $tree;
     }
 
+    /**
+     * @param $var1
+     * @param $var2
+     * --------- TODO: Factorize/clean ----------//
+     */
     public function compare(&$var1, $var2) {
         if (is_array($var1) && is_array($var2)) {
             foreach ($var2 as $key => $row) {
@@ -116,20 +120,36 @@ class ClassParser
         unset($var2);
     }
 
-    public function setParentAndChildren(array &$array, &$parent)
+    /**
+     * @param array $array
+     * @param TreeObjectInterface $parent
+     * --------- TODO: Factorize/clean ----------//
+     */
+    public function setParentAndChildren(array &$array, TreeObjectInterface &$parent)
     {
         foreach ($array as $key => &$value) {
-            if (is_array($value)) {
-                $this->setParentAndChildren($value, $array);
-            }
             if (is_string($key)) {
                 $key = new TreeNamespace($key);
+                $key->setParent($parent);
+                $parent->addChild($key);
             }
             if (is_string($value)) {
                 $value = new TreeClass($value);
+                if ($key instanceof TreeObjectInterface) {
+                    $value->setParent($key);
+                    $key->addChild($value);
+                } else {
+                    $value->setParent($parent);
+                    $parent->addChild($value);
+                }
             }
-            $key->setParent($parent);
-            $parent->addChild($key);
+            if (is_array($value)) {
+                if ($key instanceof TreeObjectInterface) {
+                    $this->setParentAndChildren($value, $key);
+                } else {
+                    $this->setParentAndChildren($value, $parent);
+                }
+            }
         }
     }
 }
