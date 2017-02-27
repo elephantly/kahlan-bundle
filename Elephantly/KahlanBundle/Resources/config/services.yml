@@ -8,4 +8,7 @@ services:
 
     kahlan.spec_builder:
     	class: Elephantly\KahlanBundle\Services\SpecBuilder
-    	arguments: ['@kahlan.class_parser']
+
+    kahlan.tree_builder:
+    	class: Elephantly\KahlanBundle\Services\TreeBuilder
+    	arguments: ['@kahlan.class_parser', '@kahlan.spec_builder']

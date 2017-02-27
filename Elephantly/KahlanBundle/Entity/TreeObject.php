@@ -30,12 +30,12 @@ abstract class TreeObject extends Tree implements NamespacedTreeObjectInterface
     {
         parent::__construct($name, $children);
 
-        $this->setFqcn($name);
-
         if (null !== $parent) {
             $this->parent = $parent;
             $parent->addChild($this);
             $this->setFqcn($parent->getFqcn().$name);
+        } else {
+            $this->setFqcn($name);
         }
     }
 

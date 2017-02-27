@@ -8,7 +8,6 @@
 
 namespace Elephantly\KahlanBundle\Services;
 
-
 /**
  * Class SpecBuilder
  * @package Elephantly\KahlanBundle\Services
@@ -16,16 +15,14 @@ namespace Elephantly\KahlanBundle\Services;
 class SpecBuilder
 {
     /**
-     * @var ClassParser
+     * @var string
      */
-    private $parser;
+    private $filecontent = '';
 
     /**
      * SpecBuilder constructor.
-     * @param ClassParser $parser
      */
-    public function __construct(ClassParser $parser)
+    public function __construct()
     {
-        $this->parser = $parser;
     }
 }
