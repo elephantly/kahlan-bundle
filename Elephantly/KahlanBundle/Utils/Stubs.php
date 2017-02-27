@@ -79,7 +79,7 @@ EOD;
      * @var string
      */
     public static $testedService = <<<'EOD'
-        $this->%className% = $this->get('
+        $this->%className% = $this->get('insert.service_name.here');
 EOD;
 
     /**
