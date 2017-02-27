@@ -14,7 +14,7 @@ use Kahlan\Suite;
 use Kahlan\Matcher;
 use Kahlan\Cli\Kahlan;
 
-class KahlanCommand extends ContainerAwareCommand
+class KahlanRunCommand extends ContainerAwareCommand
 {
     /**
      * {@inheritdoc}
