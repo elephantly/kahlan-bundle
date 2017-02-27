@@ -152,9 +152,9 @@ EOD;
     {
         $type   = ucfirst($type);
         $freq   = ucfirst($freq);
-        if ($typeErr = !in_array($type, array(self::STUB_CLASS, self::STUB_METHOD)) || !in_array($freq, array(self::FREQUENCY_ALL, self::FREQUENCY_EACH))) {
-            $error = $typeErr ? "Stubbing type must be either 'class' or 'method'" : "Stubbing frequency must be either 'all' or 'each'" ;
-            throw new InvalidArgumentException($error);
+        if (($typeErr = !in_array($type, array(self::STUB_CLASS, self::STUB_METHOD))) || !in_array($freq, array(self::FREQUENCY_ALL, self::FREQUENCY_EACH))) {
+            $error = isset($typeErr) ? array('type', self::STUB_CLASS, self::STUB_METHOD) : array('frequency', self::FREQUENCY_ALL, self::FREQUENCY_EACH) ;
+            throw new InvalidArgumentException("Stubbing $error[0] must be either '$error[1]' or '$error[2]'");
         }
         $static = "$timing$type";
 
