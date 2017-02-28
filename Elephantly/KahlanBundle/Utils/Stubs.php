@@ -1,10 +1,16 @@
 <?php
 
+namespace Elephantly\KahlanBundle\Utils;
+
 /**
  * Created by PhpStorm.
  * User: benjamin
  * Date: 27/02/17
  * Time: 16:43
+ */
+/**
+ * Class Stubs
+ * @package Elephantly\KahlanBundle\Utils
  */
 class Stubs
 {
@@ -17,12 +23,24 @@ class Stubs
      */
     const FREQUENCY_EACH = 'Each';
 
+    /**
+     * Stubbing type for 'before' and 'after'
+     */
     const STUB_CLASS     = 'Class';
 
+    /**
+     * Stubbing type for 'before' and 'after'
+     */
     const STUB_METHOD    = 'Method';
 
+    /**
+     * Stubbing timing for 'before' and 'after'
+     */
     const TIMING_BEFORE  = 'before';
 
+    /**
+     * Stubbing timing for 'before' and 'after'
+     */
     const TIMING_AFTER   = 'after';
 
     /**
@@ -31,23 +49,16 @@ class Stubs
     public static $tokens = array(
         'classContext',
         'className',
+        'testedService',
         'classContent',
-        'beforeClass',
         'dependenciesBlock',
         'methodContext',
         'methodSpecs',
         'itContext',
-        'beforeMethod',
-        'patching',
         'methodContent',
         'methodName',
         'methodArgs',
         'expectCondition',
-        'afterMethod',
-        'afterClass',
-        'resetting',
-        'finally',
-        'frequency',
     );
 
     /**
@@ -61,7 +72,7 @@ class Stubs
  * Kahlan created by Jails @ Kahlan
  */
  
-describe(%className%, function () {
+describe('%className%', function () {
     %classContent%
 });
 EOD;
@@ -71,7 +82,7 @@ EOD;
      */
     private static $beforeClass = <<<'EOD'
     before%frequency%(function () {
-        %dependeciesBlock%
+        %dependenciesBlock%
     });
 EOD;
 
@@ -86,7 +97,7 @@ EOD;
      * @var string
      */
     public static $methodContext = <<<'EOD'
-    describe(%methodName%, function () {
+    describe('%methodName%', function () {
         %methodSpecs%
     });
 EOD;
@@ -114,14 +125,14 @@ EOD;
      * @var string
      */
     public static $methodContent = <<<'EOD'
-            $result = %className%->%methodName%(%methodArgs%);
+            $result = $this->%className%->%methodName%(%methodArgs%);
 EOD;
 
     /**
      * @var string
      */
     public static $expectCondition = <<<'EOD'
-            expect($result)->%expectCondition%;
+            expect($result)->%expectResult%;
 EOD;
 
     /**
@@ -154,7 +165,7 @@ EOD;
         $freq   = ucfirst($freq);
         if (($typeErr = !in_array($type, array(self::STUB_CLASS, self::STUB_METHOD))) || !in_array($freq, array(self::FREQUENCY_ALL, self::FREQUENCY_EACH))) {
             $error = isset($typeErr) ? array('type', self::STUB_CLASS, self::STUB_METHOD) : array('frequency', self::FREQUENCY_ALL, self::FREQUENCY_EACH) ;
-            throw new InvalidArgumentException("Stubbing $error[0] must be either '$error[1]' or '$error[2]'");
+            throw new \InvalidArgumentException("Stubbing $error[0] must be either '$error[1]' or '$error[2]'");
         }
         $static = "$timing$type";
 
