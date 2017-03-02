@@ -19,6 +19,7 @@ class SpecBuilder
 {
     /**
      * @param TreeObjectInterface $object
+     * @return string;
      */
     public function buildSpecsForClass(TreeObjectInterface $object)
     {
@@ -73,6 +74,8 @@ class SpecBuilder
             'className'    => $className,
             'classContent' => $methodContext,
             ));
+
+        return $classContent;
     }
 
     /**

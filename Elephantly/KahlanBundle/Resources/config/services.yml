@@ -11,4 +11,4 @@ services:
 
     kahlan.tree_builder:
     	class: Elephantly\KahlanBundle\Services\TreeBuilder
-    	arguments: ['@kahlan.class_parser', '@kahlan.spec_builder']
+    	arguments: ['@kahlan.class_parser', '@kahlan.spec_builder', '%kernel.root_dir%' ]
