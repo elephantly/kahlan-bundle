@@ -18,5 +18,10 @@
         "psr-0": {
             "Elephantly\\KahlanBundle": ""
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Elephantly\\KahlanBundle\\Services\\InstallScript::initBundle()"
+            ]
     }
 }
