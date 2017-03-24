@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/elephantly/kahlan-bundle.svg?branch=master)](https://travis-ci.org/elephantly/kahlan-bundle)
+[![Current Version](https://img.shields.io/packagist/v/elephantly/kahlan-bundle.svg)](https://packagist.org/packages/elephantly/kahlan-bundle) [![Build Status](https://travis-ci.org/elephantly/kahlan-bundle.svg?branch=master)](https://travis-ci.org/elephantly/kahlan-bundle) [![Downloads](https://img.shields.io/packagist/dt/elephantly/kahlan-bundle.svg)](https://packagist.org/packages/elephantly/kahlan-bundle) [![Licence](https://img.shields.io/packagist/l/elephantly/kahlan-bundle.svg)](https://packagist.org/packages/elephantly/kahlan-bundle)
 # kahlan-bundle
 A ToolBox to use kahlan with symfony easily.
 
