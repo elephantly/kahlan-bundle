@@ -23,5 +23,8 @@
         "post-install-cmd": [
             "Elephantly\\KahlanBundle\\Services\\InstallScript::initBundle()"
             ]
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
