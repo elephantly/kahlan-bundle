@@ -5,4 +5,6 @@ php:
 
 script:
   - mkdir spec
+  - pwd
+  - ls -lrth
   - bin/kahlan
