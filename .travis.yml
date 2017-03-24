@@ -5,6 +5,6 @@ php:
 
 script:
   - composer install --no-scripts
-  - composer update
+  - composer update --no-scripts
   - mkdir spec
   - bin/kahlan
