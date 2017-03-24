@@ -20,9 +20,15 @@
         }
     },
     "scripts": {
+        "install-script": [
+            "Elephantly\\KahlanBundle\\Services\\InstallScript::initBundle"
+        ],
         "post-install-cmd": [
-            "Elephantly\\KahlanBundle\\Services\\InstallScript::initBundle()"
-            ]
+            "@install-script"
+        ],
+        "post-update-cmd": [
+            "@install-script"
+        ]
     },
     "config": {
         "bin-dir": "bin"
