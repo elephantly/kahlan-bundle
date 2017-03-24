@@ -14,7 +14,7 @@ class InstallScript
 {
     public static function initBundle()
     {
-        $loader = require $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
+        $loader = require 'vendor/autoload.php';
         $kernel = new \AppKernel('prod', false);
         $kernel->loadClassCache();
 

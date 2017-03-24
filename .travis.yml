@@ -5,6 +5,5 @@ php:
 
 script:
   - composer install
-  - ls -lrth vendor/
   - mkdir spec
   - bin/kahlan
