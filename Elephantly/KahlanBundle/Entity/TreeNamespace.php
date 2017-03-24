@@ -18,7 +18,7 @@ class TreeNamespace extends TreeObject
      */
     public function __construct($name, TreeObjectInterface $parent = null, $children = array())
     {
-        if (!($parent instanceof (Tree::class || TreeNamespace::class))) {
+        if (!($parent instanceof Tree || $parent instanceof TreeNamespace)) {
             throw new \InvalidArgumentException('TreeNamespaces can only have Trees or TreeNamespaces parents');
         }
         parent::__construct($name, $parent, $children);
