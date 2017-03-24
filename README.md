@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/elephantly/kahlan-bundle.svg?branch=master)](https://travis-ci.org/elephantly/kahlan-bundle)
 # kahlan-bundle
 A ToolBox to use kahlan with symfony easily.
 
