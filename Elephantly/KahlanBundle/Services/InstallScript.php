@@ -19,6 +19,6 @@ class InstallScript
 
         $kernelManipulator = new KernelManipulator($kernel);
 
-        $ret = $kernelManipulator->addBundle('Elephantly\KahlanBundle\KahlanBundle');
+        $ret = $kernelManipulator->addBundle('Elephantly\\KahlanBundle\\KahlanBundle');
     }
 }
