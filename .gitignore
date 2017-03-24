@@ -1,5 +1,5 @@
 # couscous templates
 .couscous
-.idea
+.idea/*
 classmap*
 temp.php
