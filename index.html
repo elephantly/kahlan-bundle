@@ -80,17 +80,20 @@
                             <p><a href="https://packagist.org/packages/elephantly/kahlan-bundle"><img src="https://img.shields.io/packagist/v/elephantly/kahlan-bundle.svg" alt="Current Version" /></a> <a href="https://travis-ci.org/elephantly/kahlan-bundle"><img src="https://travis-ci.org/elephantly/kahlan-bundle.svg?branch=master" alt="Build Status" /></a> <a href="https://packagist.org/packages/elephantly/kahlan-bundle"><img src="https://img.shields.io/packagist/dt/elephantly/kahlan-bundle.svg" alt="Downloads" /></a> <a href="https://packagist.org/packages/elephantly/kahlan-bundle"><img src="https://img.shields.io/packagist/l/elephantly/kahlan-bundle.svg" alt="Licence" /></a></p>
 <h1 id="kahlan-bundle">kahlan-bundle</h1>
 <p>A ToolBox to use kahlan with symfony easily.</p>
+<h2 id="install-">Install :</h2>
+<p>Simply use <code>composer require --dev "elephantly/kahlan-bundle"</code> or add <code>"elephantly/kahlan-bundle": "0.9.6"</code> to your <code>composer.json</code> file.</p>
 <h2 id="configuration-">Configuration :</h2>
 <p>Simply register the bundle in Symfony's kernel like any other bundle:</p>
 <pre><code class="language-php">&lt;?php
 // app/AppKernel.php
     public function registerBundles()
     {
-        $bundles = array(
-            [...]
-            new Elephantly\KahlanBundle\KahlanBundle(),
-        );
         [...]
+
+        if (in_array($this-&gt;getEnvironment(), ['dev', 'test'], true)) {
+            ...
+            $bundles[] = new Elephantly\KahlanBundle\KahlanBundle();
+        }
 
         return $bundles;
     }</code></pre>
