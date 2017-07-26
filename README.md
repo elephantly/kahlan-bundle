@@ -2,6 +2,9 @@
 # kahlan-bundle
 A ToolBox to use kahlan with symfony easily.
 
+## Install :
+Simply use `composer require --dev "elephantly/kahlan-bundle"` or add `"elephantly/kahlan-bundle": "0.9.6"` to your `composer.json` file.
+
 ## Configuration :
 Simply register the bundle in Symfony's kernel like any other bundle:
 
@@ -10,11 +13,12 @@ Simply register the bundle in Symfony's kernel like any other bundle:
 // app/AppKernel.php
     public function registerBundles()
     {
-        $bundles = array(
-            [...]
-            new Elephantly\KahlanBundle\KahlanBundle(),
-        );
         [...]
+        
+        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
+            ...
+            $bundles[] = new Elephantly\KahlanBundle\KahlanBundle();
+        }
 
         return $bundles;
     }
