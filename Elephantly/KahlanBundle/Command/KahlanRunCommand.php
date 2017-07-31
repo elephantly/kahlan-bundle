@@ -120,7 +120,10 @@ class KahlanRunCommand extends ContainerAwareCommand
      */
     public function createSpecs(array $autoloaders)
     {
-        $box = box('kahlan', new Box());
+        if (!defined('DS')) {
+            define('DS', DIRECTORY_SEPARATOR);
+        }
+        $box = \Kahlan\box('kahlan', new Box());
 
         $box->service('suite.global', function() {
             return new Suite();
@@ -130,6 +133,7 @@ class KahlanRunCommand extends ContainerAwareCommand
             'autoloader' => reset($autoloaders),
             'suite'      => $box->get('suite.global')
         ]);
+        initKahlanGlobalFunctions();
 
         return $specs;
     }

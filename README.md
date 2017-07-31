@@ -14,7 +14,7 @@ Simply register the bundle in Symfony's kernel like any other bundle:
     public function registerBundles()
     {
         [...]
-        
+
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
             ...
             $bundles[] = new Elephantly\KahlanBundle\KahlanBundle();
