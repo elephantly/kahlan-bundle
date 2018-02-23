@@ -2,6 +2,13 @@
 # kahlan-bundle
 A ToolBox to use kahlan with symfony easily.
 
+## Requirements :
+* php >=5.4
+* symfony/console ~2.7|~3.0|~4.0
+* symfony/framework-bundle ~2.7|~3.0|~4.0
+* kriswallsmith/buzz ^0.15
+* kahlan/kahlan ~3.1|~4.0
+
 ## Install :
 Simply use `composer require --dev "elephantly/kahlan-bundle"` or add `"elephantly/kahlan-bundle": "0.9.6"` to your `composer.json` file.
 
